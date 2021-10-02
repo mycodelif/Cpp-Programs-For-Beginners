@@ -1,16 +1,27 @@
-// program to print the value of i
-
+// CPP program to illustrate
+// Linear Search
 #include <iostream>
 using namespace std;
 
-int main() {
-    for (int i = 1; i <= 5; i++) {
-        // break condition     
-        if (i == 3) {
-            break;
-        }
-        cout << i << endl;
-    }
+void findElement(int arr[], int size, int key)
+{
+	// loop to traverse array and search for key
+	for (int i = 0; i < size; i++) {
+		if (arr[i] == key) {
+			cout << "Element found at position: " << (i + 1);
+		}
+	}
+}
 
-return 0;
+// Driver program to test above function
+int main()
+{
+	int arr[] = { 1, 2, 3, 4, 5, 6 };
+	int n = 6; // no of elements
+	int key = 3; // key to be searched
+
+	// Calling function to find the key
+	findElement(arr, n, key);
+
+	return 0;
 }
